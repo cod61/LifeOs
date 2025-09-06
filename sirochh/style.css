@@ -1,0 +1,238 @@
+/* Umumiy */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fafafa;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  background: #1a1a1a;
+  color: #eee;
+  padding: 15px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.navbar .container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #00aaff;
+  cursor: default;
+  position: relative;
+}
+
+.logo::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 40%;
+  height: 4px;
+  background: #00aaff;
+  border-radius: 10px;
+}
+
+/* Nav links */
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  color: #eee;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 12px;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: inset 0 0 0 0 transparent;
+}
+
+.nav-links a:hover {
+  background-color: #00aaff;
+  color: #fff;
+  box-shadow: 0 0 10px #00aaff;
+}
+
+/* Hero section */
+.hero {
+  background: linear-gradient(135deg, #007bff, #00aaff);
+  color: white;
+  padding: 120px 0;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  box-shadow: inset 0 0 50px rgba(0,0,0,0.1);
+  border-radius: 40px 40px 0 0;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 40px;
+  background: white;
+  border-radius: 50% / 100%;
+  box-shadow: 0 8px 12px rgba(0,0,0,0.05);
+}
+
+.hero .hero-btn {
+  margin-top: 25px;
+}
+
+/* Projects section */
+.projects {
+  padding: 60px 0;
+  background: #fff;
+  max-width: 1100px;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,170,255,0.15);
+  text-align: center;
+}
+
+.project-card {
+  background: #fefefe;
+  padding: 25px 30px;
+  margin: 25px auto;
+  border-left: 8px solid #00aaff;
+  box-shadow: 0 6px 15px rgba(0,170,255,0.15);
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 700px;
+  text-align: left;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0,170,255,0.3);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #00aaff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 700;
+  box-shadow: 0 5px 15px rgba(0,170,255,0.6);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  user-select: none;
+}
+
+.btn:hover {
+  background: #007bff;
+  box-shadow: 0 8px 22px rgba(0,123,255,0.7);
+  transform: scale(1.05);
+}
+
+/* Contact section */
+.contact {
+  background: #f4f6f8;
+  padding: 50px 0;
+  text-align: center;
+  color: #555;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  border-radius: 30px 30px 0 0;
+  box-shadow: inset 0 2px 15px rgba(0,0,0,0.02);
+  margin-top: 60px;
+}
+
+.contact a {
+  color: #00aaff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+  background: #1a1a1a;
+  color: #eee;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+}
+
+/* Responsiv */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 10px;
+  }
+
+  .hero {
+    padding: 80px 0;
+    font-size: 1.1rem;
+  }
+
+  .project-card {
+    margin: 15px;
+  }
+}
+
+
+/* Hamburger tugma */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: #eee;
+  cursor: pointer;
+}
+
+/* Mobilga mos */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #1a1a1a;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+}
